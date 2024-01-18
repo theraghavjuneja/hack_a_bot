@@ -53,11 +53,24 @@ features_sublist(0,features_list,mode)
 features_sublist(1,features_list,teamSize)
 features_sublist(2,features_list,numberOfRegistrations)
 
+
+
+def get_all_links(class_name):
+    college_elements = driver.find_elements(By.CLASS_NAME, class_name)
+    links = []  # Create an empty list to store links
+    for college_element in college_elements:
+        college_element.click()
+        driver.implicitly_wait(2)
+        matching_links = driver.find_elements_by_css_selector('a[href^="/drills/"]')
+        for link in matching_links:
+            links.append(link.get_attribute("href"))  
+    return links
+
 print(mode)
 print(teamSize)
-
-
-
+l1=get_all_links('MuiGrid-root.MuiGrid-container.jobFeature-title-bg.css-5dis7f')
+for l2 in l1:
+    print(l2)
     
     
     
