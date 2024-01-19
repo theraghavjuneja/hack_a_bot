@@ -35,23 +35,23 @@ def extraction(hackathon_names_list,college_names_list,features_list):
     extract_text_content(driver, 'MuiTypography-root.MuiTypography-body1.featuredCardTxt.css-v12ejh', features_list,timeout=20)
 
 
-extraction(hackathon_names_list,college_names_list,features_list)
+# extraction(hackathon_names_list,college_names_list,features_list)
 
 
 # now features_list is separated to mode and teamSize as well as the numberOfRegistrations list
 
 
-mode=[]
-teamSize=[]
-numberOfRegistrations=[]
+# mode=[]
+# teamSize=[]
+# numberOfRegistrations=[]
 
 def features_sublist(startIndex,features_list,sublist):
     for i in range(startIndex,len(features_list),3):
         sublist.append(features_list[i])
 
-features_sublist(0,features_list,mode)
-features_sublist(1,features_list,teamSize)
-features_sublist(2,features_list,numberOfRegistrations)
+# features_sublist(0,features_list,mode)
+# features_sublist(1,features_list,teamSize)
+# features_sublist(2,features_list,numberOfRegistrations)
 
 
 
@@ -66,11 +66,11 @@ def get_all_links(class_name):
             links.append(link.get_attribute("href"))  
     return links
 
-print(mode)
-print(teamSize)
-l1=get_all_links('MuiGrid-root.MuiGrid-container.jobFeature-title-bg.css-5dis7f')
-for l2 in l1:
-    print(l2)
+# print(mode)
+# print(teamSize)
+# l1=get_all_links('MuiGrid-root.MuiGrid-container.jobFeature-title-bg.css-5dis7f')
+# for l2 in l1:
+#     print(l2)
     
     
     
