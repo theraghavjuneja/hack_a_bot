@@ -1,3 +1,4 @@
+import json
 import concurrent.futures
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -22,6 +23,16 @@ def process_link(link):
     print("Heading:", headings)
     start_dates_list = extract_element(link, 'MuiTypography-root.MuiTypography-body1.css-1udcvx7')
     print("Starting dates:", start_dates_list)
+
+    # Create dictionary with link as key and headings and start_dates_list as values
+    result_dict = {
+        "start_dates": start_dates_list,
+        "heading": headings
+    }
+
+    # Write the result to a JSON file
+    with open(f"{link.replace('/', '_')}.json", 'w') as json_file:
+        json.dump(result_dict, json_file)
 
 list_of_links = get_all_links('MuiGrid-root.MuiGrid-container.jobFeature-title-bg.css-5dis7f')
 

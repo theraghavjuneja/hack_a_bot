@@ -24,7 +24,7 @@ def extract_element(url,class_name):
     
     for heading in heading_text_locator:
         text_list.append(heading.text)
-    
+    driver.quit()
     return text_list
 # def get_non_matching_labels(driver):
 #     find_class = driver.find_elements(By.CLASS_NAME, 'MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370')
