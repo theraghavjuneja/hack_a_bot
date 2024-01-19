@@ -1,0 +1,78 @@
+{
+  "modes": [
+    [],
+    [
+      "Online",
+      "In-Person"
+    ],
+    [
+      "Online",
+      "Online",
+      "In-Person"
+    ],
+    [
+      "Online",
+      "Online",
+      "Online",
+      "In-Person"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "Online",
+      "Online",
+      "Online",
+      "Online"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      ""
+    ],
+    [],
+    []
+  ],
+  "end_dates": [
+    [],
+    [
+      "Ends : Jan 25, 2024, 11:59 PM",
+      "Ends : Jan 28, 2024, 11:59 PM"
+    ],
+    [
+      "Ends : Mar 5, 2024, 12:00 PM",
+      "Ends : Mar 29, 2024, 12:59 PM",
+      "Ends : Mar 31, 2024, 05:00 PM"
+    ],
+    [
+      "Ends : Jan 15, 2024, 11:59 PM",
+      "Ends : Jan 14, 2024, 11:59 PM",
+      "Ends : Jan 19, 2024, 12:00 PM",
+      "Ends : Jan 21, 2024, 12:00 PM"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "Ends : Sep 23, 2023, 10:00 AM",
+      "Ends : Sep 23, 2023, 08:00 PM",
+      "Ends : Sep 24, 2023, 10:00 AM",
+      "Ends : Sep 24, 2023, 10:00 PM"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "Ends : Feb 17, 2023, 04:30 PM"
+    ],
+    [],
+    []
+  ]
+}

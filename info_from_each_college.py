@@ -42,14 +42,17 @@ def extract_element(url,class_name):
 # headings=extract_element('MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-2vzt7s') 
 # start_dates_list=extract_element('MuiTypography-root.MuiTypography-body1.css-1udcvx7')
 
-def get_paragraphs_without_label(driver, paragraph_selector, label_selector):
+def get_paragraphs_without_label(link,driver, paragraph_selector, label_selector):
+    webdriver_path = r'D:\DOWNLOADS\chromedriver-win64\chromedriver.exe'  # Update this with the actual path
+    driver = webdriver.Chrome(executable_path=webdriver_path)
+    driver.get(link)
     paragraphs = driver.find_elements_by_css_selector(paragraph_selector)
     paragraphs_without_label = []
 
     for paragraph in paragraphs:
         if not paragraph.find_elements_by_css_selector(label_selector):
             paragraphs_without_label.append(paragraph.text)
-
+    driver.quit()
     return paragraphs_without_label
 # the paragraph and label selector which I need to search for
 # paragraph_selector = '.MuiTypography-root.MuiTypography-body1.css-w4oa02'
