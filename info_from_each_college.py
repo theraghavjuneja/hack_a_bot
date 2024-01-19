@@ -23,6 +23,7 @@ def extract_element(class_name):
     
     return text_list
 
+
 headings=extract_element('MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-2vzt7s') 
 start_dates_list=extract_element('MuiTypography-root.MuiTypography-body1.css-1udcvx7')
 for heading in headings:
@@ -30,10 +31,23 @@ for heading in headings:
 print()
 for dates in start_dates_list:
     print(dates)
-
+# <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-12po370">Bennett University, Greater Noida </label>
 
 # 3rd one has a different approach
+find_class=driver.find_elements(By.CLASS_NAME,'MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370')
+# corrsponding to one element only
+label_result=''
+for element in find_class:
+    label_result=element.text
 
-    
+print()
+print()
+print()
+all_labels=driver.find_elements(By.CLASS_NAME,'MuiTypography-root.MuiTypography-body1.css-w4oa02')
+for element in all_labels:
+    if(element.text==label_result):
+        pass
+    else:
+        print(element.text)
 
 
