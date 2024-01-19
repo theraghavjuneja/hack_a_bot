@@ -3,17 +3,7 @@ from data_from_web import features_sublist
 from data_from_web import get_all_links
 from info_from_each_college import extract_element
 import json
-# hackathon_names_list=[]
-# college_names_list=[]
-# features_list=[]
-# extraction(hackathon_names_list,college_names_list,features_list)
 
-# mode=[]
-# teamSize=[]
-# numberOfRegistrations=[]
-# features_sublist(0,features_list,mode)
-# features_sublist(1,features_list,teamSize)
-# features_sublist(2,features_list,numberOfRegistrations)
 
 
 json_data = {"headings": [], "starting_dates": []}

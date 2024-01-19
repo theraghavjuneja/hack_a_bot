@@ -5,11 +5,17 @@
     "teamSize": "Individual Participation",
     "numberOfRegistrations": "1 registered"
   },
+  "NIT Agartala": {
+    "hackathonName": "HackNITA",
+    "mode": "",
+    "teamSize": "Team: 1 - 3",
+    "numberOfRegistrations": "23 registered"
+  },
   "MIET, Meerut": {
     "hackathonName": "MLSA MIET DevGathering Hackathon 2024",
     "mode": "Hybrid",
     "teamSize": "Team: 3 - 4",
-    "numberOfRegistrations": "5 registered"
+    "numberOfRegistrations": "6 registered"
   },
   "Bennett University (Times of India Group)": {
     "hackathonName": "INDUSTRY HACKATHON",
@@ -94,29 +100,5 @@
     "mode": "In-person",
     "teamSize": "Team: 1 - 4",
     "numberOfRegistrations": "375 registered"
-  },
-  "Hakuna Matata Solutions Pvt Ltd": {
-    "hackathonName": "Hakuna Matata Hire-A-Thon Freshers",
-    "mode": "Online",
-    "teamSize": "Individual Participation",
-    "numberOfRegistrations": "278 registered"
-  },
-  "Hakuna Matata Solutions Pvt Ltd2": {
-    "hackathonName": "Hakuna Matata Hire-A-Thon .Net",
-    "mode": "Online",
-    "teamSize": "Individual Participation",
-    "numberOfRegistrations": "42 registered"
-  },
-  "Hakuna Matata Solutions Pvt Ltd3": {
-    "hackathonName": "Hakuna Matata Hire-A-Thon React Native",
-    "mode": "Online",
-    "teamSize": "Individual Participation",
-    "numberOfRegistrations": "49 registered"
-  },
-  "Hakuna Matata Solutions Pvt Ltd4": {
-    "hackathonName": "Hakuna Matata Hire-A-Thon Angular",
-    "mode": "Online",
-    "teamSize": "Individual Participation",
-    "numberOfRegistrations": "122 registered"
   }
 }
