@@ -13,28 +13,27 @@ webdriver_path = r'D:\DOWNLOADS\chromedriver-win64\chromedriver.exe'  # Update t
 driver = webdriver.Chrome(executable_path=webdriver_path)
 driver.get(url)
 
-# wait=WebDriverWait(driver,10)
-# left_namesw=wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME,'MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-2vzt7s')))
-left_names = driver.find_elements(By.XPATH, '//*[@id="root"]/div/div[2]/div[2]/div[3]/div/div[3]/div/div[2]/div[3]/div[2]/div[1]/p')
-paragraphs = driver.find_elements(By.CLASS_NAME, 'MuiTypography-root.MuiTypography-body1.css-w4oa02')
-start_dates=driver.find_elements(By.CLASS_NAME,'MuiTypography-root.MuiTypography-body1.css-1udcvx7')
 
-for paragraph in paragraphs:
-    print(paragraph.text)
-print()
-for name in left_names:
-    a=name.text
-    print(a)
-print()
-for date in start_dates:
-    a=date.text
-    print(a)
-# left_names=driver.find_elements(By.CLASS_NAME,'MuiTypography-root.MuiTypography-body1.css-w4oa02')
-# for name in left_names:
-#     a=name.text
-#     print(a)
+def extract_element(class_name):
+    heading_text_locator = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, class_name)))
+    text_list = []
+    
+    for heading in heading_text_locator:
+        text_list.append(heading.text)
+    
+    return text_list
 
-driver.close()
-# ok so now I have got all the required things My task is to make a corresponding file 
+headings=extract_element('MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-2vzt7s') 
+start_dates_list=extract_element('MuiTypography-root.MuiTypography-body1.css-1udcvx7')
+for heading in headings:
+    print(heading)
+print()
+for dates in start_dates_list:
+    print(dates)
+
+
+# 3rd one has a different approach
+
+    
 
 
