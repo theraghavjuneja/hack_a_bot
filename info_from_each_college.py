@@ -38,40 +38,30 @@ def extract_element(class_name):
 
 headings=extract_element('MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-2vzt7s') 
 start_dates_list=extract_element('MuiTypography-root.MuiTypography-body1.css-1udcvx7')
-print("The headings result")
-for heading in headings:
-    print(heading)
-print()
-print("Start dates result")
-for dates in start_dates_list:
-    print(dates)
 
-# <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-12po370">Bennett University, Greater Noida </label>
+def get_paragraphs_without_label(driver, paragraph_selector, label_selector):
+    paragraphs = driver.find_elements_by_css_selector(paragraph_selector)
+    paragraphs_without_label = []
 
-# 3rd one has a different approach
-# Find all elements with the specified class for form labels
-# print()
-# print("Labels result")
-# print()
-# find_class = driver.find_elements(By.CLASS_NAME, 'MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370')
+    for paragraph in paragraphs:
+        if not paragraph.find_elements_by_css_selector(label_selector):
+            paragraphs_without_label.append(paragraph.text)
 
+    return paragraphs_without_label
+paragraph_selector = '.MuiTypography-root.MuiTypography-body1.css-w4oa02'
+label_selector = 'label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370'
+get_labels=get_paragraphs_without_label(driver,paragraph_selector,label_selector)
 
-# label_texts = []
+if __name__=="__main__":
+    print("The headings result")
+    for heading in headings:
+        print(heading)
+    print()
+    print("Start dates result")
+    for dates in start_dates_list:
+        print(dates)
+    print("Important labels")
+    for labels in get_labels:
+        print(labels)
+driver.quit()
 
-# for element in find_class:
-#     print(element.get_attribute("class"))
-#     label_texts.append(element)
-
-# all_labels = driver.find_elements(By.CLASS_NAME, 'MuiTypography-root.MuiTypography-body1.css-w4oa02')
-
-
-# for element in all_labels:
-#     print(element.get_attribute("xpath"))
-#     if element not in label_texts:
-#         print(element.text)
-
-print("Helo final final i got")
-paragraphs = driver.find_elements_by_css_selector('.MuiTypography-root.MuiTypography-body1.css-w4oa02')
-for paragraph in paragraphs:
-    if not paragraph.find_elements_by_css_selector('label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370'):
-        print(paragraph.text)
