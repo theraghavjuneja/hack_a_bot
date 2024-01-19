@@ -48,10 +48,17 @@ def get_paragraphs_without_label(driver, paragraph_selector, label_selector):
             paragraphs_without_label.append(paragraph.text)
 
     return paragraphs_without_label
+# the paragraph and label selector which I need to search for
 paragraph_selector = '.MuiTypography-root.MuiTypography-body1.css-w4oa02'
 label_selector = 'label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-animated.MuiFormLabel-colorPrimary.MuiInputLabel-root.MuiInputLabel-animated.css-12po370'
 get_labels=get_paragraphs_without_label(driver,paragraph_selector,label_selector)
+def split_list(startIndex, original_list):
+    sublist1 = original_list[startIndex::2]
+    sublist2 = original_list[startIndex + 1::2]
+    return sublist1, sublist2
+modes,end_dates=split_list(0,get_labels)
 
+# now there is another thing i need to do 
 if __name__=="__main__":
     print("The headings result")
     for heading in headings:
@@ -61,7 +68,14 @@ if __name__=="__main__":
     for dates in start_dates_list:
         print(dates)
     print("Important labels")
-    for labels in get_labels:
-        print(labels)
+    # for labels in get_labels:
+    #     print(labels)
+    print("mode")
+    for mode in modes:
+        print(mode)
+    print("ENd date")
+    for end_date in end_dates:
+        print(end_date)
+        
 driver.quit()
 
