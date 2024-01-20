@@ -1,0 +1,138 @@
+
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": false,
+  "name": "hackathon_name",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "Code Wars Season 2- The Tech Summit'24",
+      "synonyms": [
+        "Code Wars Season 2- The Tech Summit'24",
+        "Code Wars",
+        "Code Wars Season 2",
+        "Code Wars Tech Summit'24",
+        "Wars Code Season 2"
+      ]
+    },
+    {
+      "value": "HackNITA",
+      "synonyms": [
+        "HackNITA",
+        "Hack Nita",
+        "hacknita"
+      ]
+    },
+    {
+      "value": "MLSA MIET DevGathering Hackathon 2024",
+      "synonyms": [
+        "MLSA MIET DevGathering Hackathon 2024",
+        "MLSA MIET Hackathon"
+      ]
+    },
+    {
+      "value": "INDUSTRY HACKATHON",
+      "synonyms": [
+        "INDUSTRY HACKATHON",
+        "industry hackathon"
+      ]
+    },
+    {
+      "value": "NIST Innovation Challenge",
+      "synonyms": [
+        "NIST Innovation Challenge",
+        "NIST challenge",
+        "NIST Innovation"
+      ]
+    },
+    {
+      "value": "E-Suraksha",
+      "synonyms": [
+        "E-Suraksha",
+        "Esuraksha"
+      ]
+    },
+    {
+      "value": "Respirer Air Quality Hackathon",
+      "synonyms": [
+        "Respirer Air Quality Hackathon",
+        "Air Quality Hackathon",
+        "Respirer Air Quality"
+      ]
+    },
+    {
+      "value": "\\u0936\\u0942\\u0928\\u094d\\u092f - The Sustainability Challenge",
+      "synonyms": [
+        "\\u0936\\u0942\\u0928\\u094d\\u092f - The Sustainability Challenge",
+        "The Sustainability Challenge"
+      ]
+    },
+    {
+      "value": "Smart BU Hackathon",
+      "synonyms": [
+        "Smart BU Hackathon"
+      ]
+    },
+    {
+      "value": "Cascade Cup : ML Hackathon",
+      "synonyms": [
+        "Cascade Cup : ML Hackathon",
+        "Cascade Cup"
+      ]
+    },
+    {
+      "value": "DecentralX : The Web3 Hackathon",
+      "synonyms": [
+        "DecentralX : The Web3 Hackathon",
+        "DecentralX"
+      ]
+    },
+    {
+      "value": "Innovaci\\u00f3n Unviel : Case Study",
+      "synonyms": [
+        "Innovaci\\u00f3n Unviel : Case Study",
+        "Innocacion Univel : Case Study",
+        "Innovation Unviel",
+        "Innovation Univel"
+      ]
+    },
+    {
+      "value": "Business Plan Competition",
+      "synonyms": [
+        "Business Plan Competition"
+      ]
+    },
+    {
+      "value": "Mind Installers Hakcathon 2023",
+      "synonyms": [
+        "Mind Installers Hakcathon 2023",
+        "Mind Installers 2023 Hackathon",
+        "Mind Installers"
+      ]
+    },
+    {
+      "value": "J.C. Bose UST Ideathon - 2023",
+      "synonyms": [
+        "J.C. Bose UST Ideathon - 2023",
+        "J.C. Bose UST Ideathon"
+      ]
+    },
+    {
+      "value": "The Anonymiser Hackathon",
+      "synonyms": [
+        "The Anonymiser Hackathon",
+        "Anonymiser Hackathon"
+      ]
+    },
+    {
+      "value": "Green India Hackathon North Region",
+      "synonyms": [
+        "Green India Hackathon North Region",
+        "Green India Hackathon"
+      ]
+    }
+  ],
+  "id": "0cb07057-2c4c-468a-bf73-944934cee218",
+  "isOverridable": false
+}

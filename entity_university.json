@@ -1,0 +1,107 @@
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": true,
+  "name": "university",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "NIT Agartala",
+      "synonyms": [
+        "NIT Agartala",
+        "Agartala NIT",
+        "National Institute of Technology Agartala"
+      ]
+    },
+    {
+      "value": "MIET, Meerut",
+      "synonyms": [
+        "MIET, Meerut",
+        "Meerut MIET",
+        "Meerut Institute of Engineering and Technol"
+      ]
+    },
+    {
+      "value": "Bennett University (Times of India Group)",
+      "synonyms": [
+        "Bennett University (Times of India Group)",
+        "Bennett University",
+        "BU, Greater Noida",
+        "Bennett"
+      ]
+    },
+    {
+      "value": "IIT Guwahati",
+      "synonyms": [
+        "IIT Guwahati",
+        "Indian Institue of Technology, Guwahati"
+      ]
+    },
+    {
+      "value": "Guru Nanak Dev University, Amritsar",
+      "synonyms": [
+        "Guru Nanak Dev University, Amritsar",
+        "Guru Nanak Dev University",
+        "GNDU, Amritsar"
+      ]
+    },
+    {
+      "value": "NIST Institute of Science and Technology (Autonomous)",
+      "synonyms": [
+        "NIST Institute of Science and Technology (Autonomous)",
+        "Nist Institute of Science and Technology",
+        "NSIT"
+      ]
+    },
+    {
+      "value": "Chandigarh University",
+      "synonyms": [
+        "Chandigarh University",
+        "CU Chandigarh",
+        "University Chandigarh"
+      ]
+    },
+    {
+      "value": "Respirer Living Sciences",
+      "synonyms": [
+        "Respirer Living Sciences"
+      ]
+    },
+    {
+      "value": "TelioEV",
+      "synonyms": [
+        "TelioEV"
+      ]
+    },
+    {
+      "value": "J. C. Bose Univeristy of Science and Technology",
+      "synonyms": [
+        "J. C. Bose Univeristy of Science and Technology",
+        "J.C. Bose University",
+        "J.C. Bose"
+      ]
+    },
+    {
+      "value": "IIMT College of Engineering",
+      "synonyms": [
+        "IIMT College of Engineering",
+        "IIMT"
+      ]
+    },
+    {
+      "value": "Government of West Bengal",
+      "synonyms": [
+        "Government of West Bengal",
+        "West Bengal Government"
+      ]
+    },
+    {
+      "value": "Electric One",
+      "synonyms": [
+        "Electric One"
+      ]
+    }
+  ],
+  "id": "934137f5-cecb-4389-920d-a2f3565699f2",
+  "isOverridable": false
+}
