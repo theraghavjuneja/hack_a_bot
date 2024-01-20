@@ -16,25 +16,40 @@
       "Online",
       "In-Person"
     ],
-    [],
-    [],
-    [],
-    [],
     [
       "Online",
       "Online",
+      "Online",
+      "Hybrid"
+    ],
+    [
+      "Online",
+      "Online",
+      "Online"
+    ],
+    [
       "Online",
       "Online"
     ],
     [],
     [],
     [],
+    [
+      "Online",
+      "Hybrid"
+    ],
     [],
     [],
     [
-      ""
+      "Online",
+      "Online",
+      "In-Person"
     ],
     [],
+    [
+      "Hybrid",
+      "Online"
+    ],
     []
   ],
   "end_dates": [
@@ -54,25 +69,40 @@
       "Ends : Jan 19, 2024, 12:00 PM",
       "Ends : Jan 21, 2024, 12:00 PM"
     ],
-    [],
-    [],
-    [],
-    [],
     [
-      "Ends : Sep 23, 2023, 10:00 AM",
-      "Ends : Sep 23, 2023, 08:00 PM",
-      "Ends : Sep 24, 2023, 10:00 AM",
-      "Ends : Sep 24, 2023, 10:00 PM"
+      "Ends : Dec 31, 2023, 11:59 PM",
+      "Ends : Dec 31, 2023, 12:00 PM",
+      "Ends : Jan 15, 2024, 12:00 PM",
+      "Ends : Jan 21, 2024, 06:00 PM"
+    ],
+    [
+      "Ends : Nov 19, 2023, 07:20 PM",
+      "Ends : Nov 20, 2023, 02:30 AM",
+      "Ends : Nov 20, 2023, 09:10 AM"
+    ],
+    [
+      "Ends : Oct 3, 2023, 11:59 PM",
+      "Ends : Oct 7, 2023, 05:59 PM"
     ],
     [],
     [],
     [],
+    [
+      "Ends : Sep 1, 2023, 11:58 PM",
+      "Ends : Sep 2, 2023, 04:00 PM"
+    ],
     [],
     [],
     [
-      "Ends : Feb 17, 2023, 04:30 PM"
+      "Ends : Apr 14, 2023, 04:00 PM",
+      "Ends : Apr 15, 2023, 04:00 PM",
+      "Ends : Apr 18, 2023, 05:00 PM"
     ],
     [],
+    [
+      "Ends : May 1, 2023, 11:59 PM",
+      "Ends : Jul 5, 2023, 11:59 PM"
+    ],
     []
   ]
 }
