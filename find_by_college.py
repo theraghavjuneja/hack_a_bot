@@ -18,9 +18,6 @@ async def handle_request(request:Request):
         returned=return_the_hackathon('universities.json',parameters)
         return JSONResponse(
             content={
-
-                'fulfillmentText':f'I found the hackathon{returned} corresponding to the college {parameters}'
-
-                
+                'fulfillmentText':f"I found the {len(returned)} hackathon(s) corresponding to {parameters} which are {', '.join(returned)}"  
             }
         )
