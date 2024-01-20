@@ -7,7 +7,6 @@ import json
 
 
 json_data = {"headings": [], "starting_dates": []}
-
 list_of_links = get_all_links('MuiGrid-root.MuiGrid-container.jobFeature-title-bg.css-5dis7f')
 list_of_links=list_of_links[:-3]
 for index, link in enumerate(list_of_links):

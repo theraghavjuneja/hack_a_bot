@@ -21,3 +21,6 @@ async def handle_request(request:Request):
                 'fulfillmentText':f"I found the {len(returned)} hackathon(s) corresponding to {parameters} which are {', '.join(returned)}"  
             }
         )
+    if intent=='hackathon_detail_finder':
+        university = payload["queryResult"]["outputContexts"][0]["parameters"]["university"]
+        hackathon_name=payload["queryResult"]["outputContexts"][1].get('parameters')['hackathon_name']
