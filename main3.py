@@ -2,7 +2,10 @@ import streamlit as st
 import os 
 from google.cloud import dialogflow_v2
 st.header("Elly")
-
+with st.expander("ℹ️ Disclaimer"):
+    st.caption(
+        "Elly is still under development and testing by team ELIXIR. It can make mistakes sometimes."
+    )
 # here i have got the credentials of my app
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\Charanjeet Juneja\OneDrive\Desktop\hack_a_bot\chatbot.json"
 

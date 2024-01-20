@@ -85,3 +85,9 @@ def return_only_matching_hackathon(file_path,college_name,hackathon_name):
             result.append(f"For {hackathon_name}, the event is being conducted in {mode} mode, with a recommended size of {team_size}, and total of {registrations} students are there.  ")
 
     return '\n'.join(result)
+def search_index(json_file_path,college_name):
+    with open(json_file_path,'r') as file:
+        data=json.load(file)
+    index=list(data.keys().index(college_name))
+    return index
+        

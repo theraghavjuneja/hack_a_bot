@@ -6,6 +6,7 @@ from fastapi.responses import JSONResponse
 from main2 import return_the_hackathon
 from main2 import return_all_the_detail
 from main2 import return_only_matching_hackathon
+from main2 import search_index
 @app.get("/")
 
 async def root():
@@ -45,3 +46,16 @@ async def handle_request(request:Request):
                     'fulfillmentText':f"From {university} {hack_details}"
                 }
             )
+    if intent=='round_details':
+        # first of all I need to check ki hamara kaun sa college ki baat ho rhi hai
+        university = payload["queryResult"]["outputContexts"][0]["parameters"]["university"]
+        # Need to search the index of the corresponding university
+        get_university_index=search_index('universities.json',university)
+        # found the university_index now here
+        
+        return JSONResponse(
+            content={
+                'fulfillmentText':f"{university}"
+            }
+        )
+            
