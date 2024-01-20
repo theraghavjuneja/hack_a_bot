@@ -7,6 +7,7 @@ from main2 import return_the_hackathon
 from main2 import return_all_the_detail
 from main2 import return_only_matching_hackathon
 from main2 import search_index
+from main2 import get_labels
 @app.get("/")
 
 async def root():
@@ -52,10 +53,10 @@ async def handle_request(request:Request):
         # Need to search the index of the corresponding university
         get_university_index=search_index('universities.json',university)
         # found the university_index now here
-        
+        label_here=get_labels('output.json',get_university_index)
         return JSONResponse(
             content={
-                'fulfillmentText':f"{university}"
+                'fulfillmentText':f"{label_here}"
             }
         )
             

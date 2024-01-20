@@ -33,7 +33,7 @@ for i in range(len(college_names_list[:-3])):
             "teamSize":teamSize[i],
             "numberOfRegistrations":numberOfRegistrations[i]
         }
-json_file_path="hackathon_data_json.json"
+json_file_path="universities.json"
 with open(json_file_path, 'w') as json_file:
     json.dump(hackathon_data, json_file, indent=2)
 

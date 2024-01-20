@@ -88,6 +88,25 @@ def return_only_matching_hackathon(file_path,college_name,hackathon_name):
 def search_index(json_file_path,college_name):
     with open(json_file_path,'r') as file:
         data=json.load(file)
-    index=list(data.keys().index(college_name))
+    index = list(data.keys()).index(college_name)
     return index
-        
+# currently I am searching or getting only 2 labels here
+# def get_labels(json_file_path,index):
+#     # remember need to pass that file which has
+#     with open(json_file_path,'r') as file:
+#         data=json.load(file)
+#     # got the index too so now need to search in start dates as well as the indices
+#     start_dates=data.get('starting_dates')[index]
+#     headings=data.get('headings')[index]
+#     return f'I found the following things {", ".join(start_dates)} and {", ".join(headings)}'
+def get_labels(json_file_path, index):
+    with open(json_file_path, 'r') as file:
+        data = json.load(file)
+
+    headings = data.get('headings')[index]
+    start_dates = data.get('starting_dates')[index]
+
+    labeled_elements = [f"{heading} will {start_date}" for heading, start_date in zip(headings, start_dates)]
+
+    return labeled_elements
+    
