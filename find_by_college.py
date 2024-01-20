@@ -5,6 +5,7 @@ app=FastAPI()
 import json
 from fastapi.responses import JSONResponse
 from get_hack_name_by_path import return_the_hackathon
+from get_hack_name_by_path import return_all_the_detail
 @app.get("/")
 
 async def root():
@@ -24,3 +25,12 @@ async def handle_request(request:Request):
     if intent=='hackathon_detail_finder':
         university = payload["queryResult"]["outputContexts"][0]["parameters"]["university"]
         hackathon_name=payload["queryResult"]["outputContexts"][1].get('parameters')['hackathon_name']
+        if(hackathon_name):
+            pass
+        else:
+            hack_details=return_all_the_detail('universities.json',university)
+            return JSONResponse(
+                content={
+                    'fulfillmentText'f"From {university} {hack_details}"
+                }
+            )
