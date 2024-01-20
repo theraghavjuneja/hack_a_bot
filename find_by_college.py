@@ -6,6 +6,7 @@ import json
 from fastapi.responses import JSONResponse
 from get_hack_name_by_path import return_the_hackathon
 from get_hack_name_by_path import return_all_the_detail
+from get_hack_name_by_path import return_only_matching_hackathon
 @app.get("/")
 
 async def root():
@@ -26,7 +27,12 @@ async def handle_request(request:Request):
         university = payload["queryResult"]["outputContexts"][0]["parameters"]["university"]
         hackathon_name=payload["queryResult"]["outputContexts"][1].get('parameters')['hackathon_name']
         if(hackathon_name):
-            pass
+            to_return=return_only_matching_hackathon('universities.json',university,hackathon_name)
+            return JSONResponse(
+                content={
+                    'fulfillmentText':f"{to_return}"
+                }
+            )
         else:
             hack_details=return_all_the_detail('universities.json',university)
             return JSONResponse(
