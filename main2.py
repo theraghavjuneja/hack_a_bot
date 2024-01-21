@@ -57,7 +57,7 @@ def return_all_the_detail(file_path, college_name):
         team_size = college_details.get('teamSize')
         registrations = college_details.get('numberOfRegistrations')
 
-        result.append(f"For {hackathon_name}, the event is being conducted in {mode} mode, with a recommended size of {team_size}, and total of {registrations} students are there.  ")
+        result.append(f"For {hackathon_name}, the event is being conducted in {mode} mode, with a recommended size of {team_size}, and total of {registrations} students are there.  You can now write things like Search for information about the various rounds in this hackathon ")
 
     return '\n'.join(result)
 
