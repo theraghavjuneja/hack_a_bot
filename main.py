@@ -61,15 +61,22 @@ async def handle_request(request:Request):
                 'fulfillmentText':f"{label_here}"
             }
         )
-    if intent=='live-hackathons':
-        indices_of_live_dates=get_live_indices('output.json')
+    if intent == 'live-hackathons':
+        indices_of_live_dates = get_live_indices('output.json')
+        college_names = []
+        hackathon_names = []
+        dict_to_return={}
         with open('universities.json') as file:
-            data_dict=json.load(file)
-        result_keys = [list(data_dict.keys())[index] for index in indices_of_live_dates]
-        # now indices_of_live m jo jo hai wo sab chaiye json m se
+            data_dict = json.load(file)
+
+        for index in indices_of_live_dates:
+            college_name = list(data_dict.keys())[index]
+            hackathon_name = data_dict[college_name]["hackathonName"]
+            college_names.append(college_name)
+            hackathon_names.append(hackathon_name)
+        dict_to_return=dict(zip(college_names,hackathon_names))
         return JSONResponse(
             content={
-                'fulfillmentText':f"I found the following colleges in my data {', '.join(result_keys)}"
+                'fulfillmentText': f"I found the {', '.join([f'{key} corresponding to {value} ,' for key, value in dict_to_return.items()])}"
             }
         )
-            
