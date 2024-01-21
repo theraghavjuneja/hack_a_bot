@@ -99,14 +99,34 @@ def search_index(json_file_path,college_name):
 #     start_dates=data.get('starting_dates')[index]
 #     headings=data.get('headings')[index]
 #     return f'I found the following things {", ".join(start_dates)} and {", ".join(headings)}'
-def get_labels(json_file_path, index):
-    with open(json_file_path, 'r') as file:
-        data = json.load(file)
+import json
 
-    headings = data.get('headings')[index]
-    start_dates = data.get('starting_dates')[index]
+def get_labels(json_file_path_of_output, json_file_path_of_labels, index):
+    with open(json_file_path_of_output, 'r') as file:
+        output_json = json.load(file)
+    with open(json_file_path_of_labels) as file:
+        labels_json = json.load(file)
+        
+    headings = output_json.get('headings')[index]
+    start_dates = output_json.get('starting_dates')[index]
+    modes = labels_json.get('modes')[index]
+    ending_dates = labels_json.get('end_dates')[index]
+    
+    result_statements = []
+    for i in range(len(headings)):
+        heading = headings[i]
+        start_date = start_dates[i]
+        mode = modes[i]
+        ending_date = ending_dates[i]
+        
+        result_statement = f"{heading} will take place in {mode} mode whose starting date is {start_date} and ending date is {ending_date}."
+        result_statements.append(result_statement)
+    
+    return result_statements
 
-    labeled_elements = [f"{heading} will {start_date}" for heading, start_date in zip(headings, start_dates)]
 
-    return labeled_elements
+
+    # labeled_elements = [f"{heading} will {start_date}" for heading, start_date in zip(headings, start_dates)]
+
+    # return labeled_elements
     

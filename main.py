@@ -53,7 +53,7 @@ async def handle_request(request:Request):
         # Need to search the index of the corresponding university
         get_university_index=search_index('universities.json',university)
         # found the university_index now here
-        label_here=get_labels('output.json',get_university_index)
+        label_here=get_labels('output.json','labelss.json',get_university_index)
         return JSONResponse(
             content={
                 'fulfillmentText':f"{label_here}"
