@@ -60,4 +60,12 @@ async def handle_request(request:Request):
                 'fulfillmentText':f"{label_here}"
             }
         )
+    if intent=='live-hackathons':
+        # wo saari sites return kr dega jo aabhi live hain hmare platform par
+        
+        return JSONResponse(
+            content={
+                'fulfillmentText':f"Live is here"
+            }
+        )
             
