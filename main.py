@@ -8,6 +8,7 @@ from main2 import return_all_the_detail
 from main2 import return_only_matching_hackathon
 from main2 import search_index
 from main2 import get_labels
+from get_live import get_live_indices
 @app.get("/")
 
 async def root():
@@ -61,11 +62,14 @@ async def handle_request(request:Request):
             }
         )
     if intent=='live-hackathons':
-        # wo saari sites return kr dega jo aabhi live hain hmare platform par
-        
+        indices_of_live_dates=get_live_indices('output.json')
+        with open('universities.json') as file:
+            data_dict=json.load(file)
+        result_keys = [list(data_dict.keys())[index] for index in indices_of_live_dates]
+        # now indices_of_live m jo jo hai wo sab chaiye json m se
         return JSONResponse(
             content={
-                'fulfillmentText':f"Live is here"
+                'fulfillmentText':f"I found the following colleges in my data {', '.join(result_keys)}"
             }
         )
             
