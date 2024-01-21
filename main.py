@@ -49,11 +49,12 @@ async def handle_request(request:Request):
             )
     if intent=='round_details':
         # first of all I need to check ki hamara kaun sa college ki baat ho rhi hai
-        university = payload["queryResult"]["outputContexts"][0]["parameters"]["university"]
+        university = payload["queryResult"]["outputContexts"][0]["parameters"]['university']
+        hackathon_name=payload["queryResult"]["outputContexts"][0]["parameters"]["hackathon_name"]
         # Need to search the index of the corresponding university
-        get_university_index=search_index('universities.json',university)
-        # found the university_index now here
+        get_university_index=search_index('universities.json',university,hackathon_name)
         label_here=get_labels('output.json','labelss.json',get_university_index)
+
         return JSONResponse(
             content={
                 'fulfillmentText':f"{label_here}"
