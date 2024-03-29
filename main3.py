@@ -7,7 +7,7 @@ with st.expander("ℹ️ Disclaimer"):
         "Elly is still under development and testing by team ELIXIR. It can make mistakes sometimes."
     )
 # here i have got the credentials of my app
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\Charanjeet Juneja\OneDrive\Desktop\hack_a_bot\chatbot.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"chatbot.json"
 
 def send_message_to_dialogflow(project_id,session_id,message):
     session_client = dialogflow_v2.SessionsClient()
