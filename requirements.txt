@@ -2,3 +2,4 @@ streamlit
 selenium
 fastapi
 dialogflow
+google-cloud-dialogflow
