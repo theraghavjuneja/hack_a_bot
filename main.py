@@ -17,16 +17,14 @@ async def root():
 @app.post("/")
 async def handle_request(request:Request):
     payload=await request.json()
+    
     intent=payload['queryResult']['intent']['displayName']
     if intent=='find_hackathon_by_college':
         parameters=payload['queryResult']['parameters']['university']
         returned=return_the_hackathon('universities.json',parameters)
         return JSONResponse(
             content={
-
-                'fulfillmentText':f"I found the {len(returned)} hackathon(s) corresponding to {parameters} which are {', '.join(returned)} .You can now write find the details of hackathon_name and I will find you the details or You can also write find me details of these hackathons and I will tell the hackathon details corresponding to the college you asked"
-
-                
+                'fulfillmentText':f"I found the {len(returned)} hackathon(s) corresponding to {parameters} which are {', '.join(returned)} .You can now write find the details of hackathon_name and I will find you the details or You can also write find me details of these hackathons and I will tell the hackathon details corresponding to the college you asked"  
             }
         )
     if intent=='hackathon_detail_finder':
@@ -81,3 +79,12 @@ async def handle_request(request:Request):
                 'fulfillmentText': f"I found the {', '.join([f'{key} corresponding to {value} ,' for key, value in dict_to_return.items()])}"
             }
         )
+    
+# class Chatbot:
+#     intent=['']
+#     def __init__(self):
+#         try:
+#             if('') in intent(0:):
+#         except:
+#             Exception as e
+        

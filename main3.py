@@ -19,7 +19,6 @@ def send_message_to_dialogflow(project_id,session_id,message):
     response = session_client.detect_intent(
         request={"session": session, "query_input": query_input}
     )
-
     return response.query_result.fulfillment_text
 project_id = "hackahon-chatbot-tx9j"
 session_id = "my_id"
