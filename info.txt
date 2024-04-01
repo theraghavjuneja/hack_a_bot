@@ -1,0 +1,4 @@
+This file was created as a hackathon project. 
+TO run this file, you have to use uvicorn and run main file
+To run on streamlit,firstly host by uvicorn then streamlit run main3.py
+To connect with dialogflow, you can simply use ngrok or any hosting
